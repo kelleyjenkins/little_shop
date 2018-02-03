@@ -35,7 +35,7 @@ rake db:test:prepare
 ```
 bin/rails db:migrate RAILS_ENV=test
 ```
-#### 4) Heroku Deployment Instructions
+#### 3) Heroku Deployment Instructions
 
 ::DEPLOY EARLY AND DEPLOY OFTEN
 
