@@ -30,6 +30,7 @@ img {
   background-position: center;
   background-size: cover;
   font-family: serif;
+  padding-bottom: 30px;
  }
  .container{
     display: flex;
@@ -91,7 +92,6 @@ h1{
   background-color: #A32C2E;
   border: 1px solid black;
 }
-
 
 .create_account{
   text-align: center;
@@ -158,6 +158,7 @@ img{
   background-color: #a32c2e;
   padding: 20px;
   margin: 20px;
+  border: 1px solid black;
 }
 
 .back-items {
@@ -174,4 +175,80 @@ img{
 }
 .analytics-dashboard{
   font-size: x-large;
+}
+
+.form {
+  font-size: 18px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+    background-color: #A32C2E;
+    border: 1px solid black;
+}
+
+.user-show-information {
+  font-size: 18px;
+  text-align: center;
+  background-color: #A32C2E;
+  border: 1px solid black;
+}
+
+.items-show {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  text-align: center;
+  width: 250px;
+  margin: 30px;
+  background-color: #A32C2E;
+  border: 1px solid black;
+}
+
+.quantity a {
+  font-size: large;
+  border: none;
+}
+
+.checkout-button a{
+  background-color: #dd5c02;
+  border: none;
+  margin: 20px;
+  border: groove;
+  color: #422101;
+}
+
+.analytics-dashboard {
+  background-color: #A32C2E;
+  border: 1px solid black;
+  width: 600px;
+  margin: 30px;
+  padding: 20px;
+}
+
+.admin-details {
+  font-size: large;
+}
+
+.elements {
+  display: inline-flex;
+  align-items: center;
+  flex-flow: column;
+  text-align: center;
+  width: 250px;
+  padding: 20px;
+  margin: 30px;
+  background-color: #A32C2E;
+  border: 1px solid black;
+}
+
+.totals {
+  background-color: #A32C2E;
+  border: 1px solid black;
+  width: 250px;
+  padding: 20px;
+  margin: 30px;
+  text-align: center
 }

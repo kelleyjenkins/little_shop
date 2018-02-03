@@ -1,7 +1,7 @@
-<div class="admin-items">
-  All Items
-</div>
-<div class="items-show">
+
+<h1>All Items</h1>
+
+<div class="categories-show">
   <% @items.each do |item| %>
     <div class="items">
     <%=link_to item.title, item_path(item) %>
@@ -26,5 +26,7 @@
     <% end %>
   </div>
   <% end %>
+</div>
+<div class="back-items">
   <%= link_to "Go back to Admin Dashboard", admin_dashboard_path %>
 </div>

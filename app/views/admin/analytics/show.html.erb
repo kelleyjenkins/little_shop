@@ -1,28 +1,31 @@
-<div class="analytics-dashboard">
+<section class="center">
   <h1>Analytics Dashboard</h1> <br>
-    <div class="analytics-display">
+    <div class="analytics-dashboard">
       <p>User with most orders:<p> <strong><%= User.most_orders_placed %></strong>
       <% @categories.each do |category| %>
       <p>Highest priced item for <%="#{category.title.capitalize}"%>:</p> <strong><%= category.highest_priced_item %></strong>
       <p>Number of Orders for <%="#{category.title.capitalize}"%>:</p> <strong><%= category.orders_placed %></strong>
       <% end %>
-    </div><br><br>
     <div class="orders-by-state">
-      Count of Completed Orders by State <br>
+      <p> Count of Completed Orders by State: </p>
       <% @orders.each do |state, count| %>
-      State: <%= state %>
-      Count: <%= count %>
+      <strong><%= state %>: <%= count %></strong><br>
     </div><br>
       <% end %>
       <%= button_to "Sort", admin_analytics_dashboard_path(:type => "sort"), method: :post %><br>
-      <div>
+
+      <p> Retired Items:</p>
         <% unless @items.nil? %>
           <% @items.each do |item| %>
-            <%= item.title %>
-            <%= item.status %>
-            <%= item.retire_count %>
+            <p> Item: <%= item.title %></p>
+            <p> Status: <%= item.status %></p>
+            <p> Count: <%= item.retire_count %></p>
           <% end %>
         <% end %>
+      </div><br><br>
       </div><br>
+  </section>
+
+    <div class="back-items">
       <%= link_to "Admin Dashboard", admin_dashboard_path %>
-</div>
+    </div>

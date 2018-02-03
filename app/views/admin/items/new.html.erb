@@ -1,9 +1,11 @@
 
+<section class="center">
+<h1>Add a New Item!</h1>
 
-<div class="title">
-  <h1>Add a New Item!</h1>
+  <%= render partial: "form" %>
+
+</section>
+
+<div class="back-items">
+<%= link_to "Return to Items", admin_items_path %>
 </div>
-
-<%= render partial: "form" %>
-
-<h4><%= link_to "Return to Items", admin_items_path %></h4>

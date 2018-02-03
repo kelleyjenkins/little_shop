@@ -1,10 +1,12 @@
-<div class="user-show-headline">
-  User Dashboard for <%= current_user.username %>
   <div class="user-show-information">
+  <h1>User Dashboard for <%= current_user.username %></h1>
+
     Full Name: <%= @user.fullname %><br/>
     Address: <%= @user.address %><br/>
     State: <%= @user.state %><br/><br/>
-    <%= link_to "Edit Account Details", edit_user_path(@user) %><br/><br><br/>
-    <%= link_to "Go to your Orders", user_orders_path(@user) %><br/>
   </div>
-</div>
+
+    <div class="back-items">
+      <%= link_to "Edit Account Details", edit_user_path(@user) %><br/><br><br/>
+      <%= link_to "Go to your Orders", user_orders_path(@user) %><br/>
+    </div>

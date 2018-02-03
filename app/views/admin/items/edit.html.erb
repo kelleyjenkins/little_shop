@@ -1,7 +1,10 @@
+<section class="center">
 
-<div class="title">
-<h2> Edit <%= @item.title %> here! </h2>
+    <h1> Edit <%= @item.title %> here! </h1>
+
+  <%= render partial: "form" %>
+</section>
+
+<div class="back-items">
+  <h4><%= link_to "Back to Items", admin_items_path %></h4>
 </div>
-<%= render partial: "form" %></br>
-
-<h4><%= link_to "Back to Items", admin_items_path %></h4>

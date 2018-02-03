@@ -1,21 +1,25 @@
 <div class="order-show">
-  Ordered by: <%= @order.user.fullname %>
-  Delivery Address: <%= @order.user.address %>
-  Order Status: <%= @order.status %>
-  Date & Time Ordered: <%= @order.created_at %>
-  Date & Time Order is updated: <%= @order.updated_at %>
+  Ordered by: <%= @order.user.fullname %><br/>
+  Delivery Address: <%= @order.user.address %><br/>
+  Order Status: <%= @order.status %><br/>
+  Date & Time Ordered: <%= @order.created_at %><br/>
+  Date & Time Order is updated: <%= @order.updated_at %><br/>
+</div>
   <% @order.items.each do |item| %>
+  <div class="items">
   Item Name: <%= link_to item.title, item_path(item) %>
-  Item Description: <%= item.description %>
-  Item Price: <%= number_to_currency(item.price) %>
-  Item Image: <%= item.image %>
-  Item Quantity: <%= (ItemOrder.find_by(order_id: @order, item_id: item.id).quantity) %>
-  Item Subtotal: <%= number_to_currency(ItemOrder.find_by(order_id: @order, item_id: item.id).subtotal) %>
+  Item Description: <%= item.description %><br/>
+  Item Price: <%= number_to_currency(item.price) %><br/>
+  Item Quantity: <%= (ItemOrder.find_by(order_id: @order, item_id: item.id).quantity) %><br/>
+  Item Subtotal: <%= number_to_currency(ItemOrder.find_by(order_id: @order, item_id: item.id).subtotal) %><br/>
   <div class="item_image">
-    Item Image:<img src="<%= asset_path(item.image)%>"/>
-    </div>
+    <img src="<%= asset_path(item.image)%>"/>
+  </div>
+  </div>
   <% end %>
 
-  Total Price: <%= number_to_currency(@order.total_price) %>
+  <h1>Total Price: <%= number_to_currency(@order.total_price) %></h1>
+  <div class="back-items">
   <%= link_to "Dashboard", user_path(current_user) %>
+</div>
 </div>

@@ -1,15 +1,19 @@
-
+<section class="center">
 <h1>Admin Dashboard</h1>
-<div class="dashboard_links">
+
+<div class="admin-details">
+  <p>Full Name: <%= current_user.fullname %></p>
+  <p>Address: <%= current_user.address %></p>
+</div>
+
+<div class="back-items">
   <%= link_to "Analytics Dashboard", admin_analytics_dashboard_path %>
   <%= link_to "Add New Item", new_admin_item_path %>
   <%= link_to "View All Items", admin_items_path %>
-
-  Full Name: <%= current_user.fullname %>
-  Address: <%= current_user.address %>
-
   <%= link_to "Edit Account Details", edit_admin_user_path(current_user)  %>
 </div>
+</section>
+
 <h2>Orders: </h2>
 <div class="orders">
       <% @orders.each do |order| %>
@@ -40,6 +44,7 @@
     </div>
       <%end %>
   </div>
+  <section class="center">
 <div class="totals">
   <h3>Totals: </h3>
   <table>
@@ -50,3 +55,4 @@
     <%= link_to 'All', admin_dashboard_path %> : <%= Order.all.count %><br><br><br>
   </table>
 </div>
+</section>

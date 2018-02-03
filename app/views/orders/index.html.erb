@@ -1,15 +1,19 @@
 <div class="order-index">
+
   <h1>All Orders for <%= current_user.username %>:</h1>
+
   <div class="orders">
     <% current_user.orders.each do |order| %>
     <div class="order_elements">
-     <p>Status: <%= order.status %></p>
-     <p>Order ID: <%= link_to order.id, user_order_path(current_user, order) %></p>
-     <p>Date Placed: <%= time_tag(order.created_at)%></p>
+      <p>Status: <%= order.status %></p>
+      <p>Order ID: <%= link_to order.id, user_order_path(current_user, order) %></p>
+      <p>Date Placed: <%= time_tag(order.created_at)%></p>
     </div>
     <% end %>
   </div><br>
+
   <div class="back-items">
     <%= link_to "User Dashboard", user_path(current_user) %>
   </div>
+
 </div>

@@ -1,18 +1,18 @@
 
 <div class="form">
   <%= form_for [:admin, @item] do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-    <%= f.label :image %>
-    <%= f.text_field :image %>
-    <%= f.label :price %>
-    <%= f.number_field :price, :class => 'text_field', step: :any %>
-    <%= f.label :status %>
-    <%= f.select :status, Item.statuses.keys.map { |key| [key.humanize, key] } %>
-    <%= f.label :category_id %>
-    <%= f.collection_select(:category_id, Category.all, :id, :title) %>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %><br/>
+    <%= f.label :description %><br/>
+    <%= f.text_field :description %><br/>
+    <%= f.label :image %><br/>
+    <%= f.text_field :image %><br/>
+    <%= f.label :price %><br/>
+    <%= f.number_field :price, :class => 'text_field', step: :any %><br/>
+    <%= f.label :status %><br/>
+    <%= f.select :status, Item.statuses.keys.map { |key| [key.humanize, key] } %><br/>
+    <%= f.label :category_id %><br/>
+    <%= f.collection_select(:category_id, Category.all, :id, :title) %><br/><br/>
     <%= f.submit %>
   <% end %>
 </div>

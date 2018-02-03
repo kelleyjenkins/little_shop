@@ -11,7 +11,7 @@
       Item: <%= item.title %><br/>
       Description: <%= item.description %><br/>
       Price: <%= number_to_currency(item.price) %><br/>
-      <div ="quantity">
+      <div class="quantity">
       Quantity: <%= @cart.count_of(item.id) %>
       <%= link_to "+", cart_add_item_path(item_id: item.id), method: :post %>
       <%= link_to "-", cart_subtract_item_path(item_id: item.id), method: :post %><br/><br/>
@@ -21,12 +21,14 @@
     </div>
     <% end %>
   </div>
-Total Price: <%= number_to_currency(@cart.total_price) %> <br/><br/>
+<h1>Total Price: <%= number_to_currency(@cart.total_price) %> </h1><br/><br/>
   <% else %>
-    <p>Your Cart is Empty!</p>
+    <h1>Your Cart is Empty!</h1>
   <% end %>
+  <div class="checkout-button">
   <% unless current_user %>
     <%= link_to "Login or Create Account to Checkout", login_path %>
   <%else  %>
     <%= link_to "Checkout", user_orders_path(current_user), method: :post %>
+  </div>
   <% end  %>
